@@ -7,9 +7,9 @@
   "main": "dist/main.js",
   "author": "zrcode",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.config.js",
-    "pre": "webpack --config webpack.dev.config.js",
-    "build": "webpack --config webpack.pro.config.js"
+    "dev": "webpack-dev-server --env dev --config webpack.dev.config.js",
+    "pre": "webpack --env pre --config webpack.dev.config.js",
+    "build": "webpack --env pro --config webpack.pro.config.js"
   },
   "keywords": [],
   "publishConfig": {
