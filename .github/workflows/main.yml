@@ -20,7 +20,7 @@ jobs:
       - name: Install and Build # 下载依赖 打包项目
         run: |
           pnpm install
-          pnpm run build
+          pnpm run pre
 
       - name: Deploy to Tencent Cloud
         uses: easingthemes/ssh-deploy@v2.1.5
