@@ -1,8 +1,8 @@
 name: Build and Deploy
-on: # 监听 main 分支上的 push 事件
+on: # 监听 master 分支上的 push 事件
   push:
     branches:
-      - main
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 构建环境使用 ubuntu
@@ -28,7 +28,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: "-rltgoDzvO --delete"
           SOURCE: dist # 这是要复制到静态服务器的文件夹名称
-          REMOTE_HOST: "43.159.8.31" # 你的腾讯云公网地址
-          REMOTE_USER: root # 腾讯云登录后默认为 root 用户
+          REMOTE_HOST: "43.153.124.195" # 你的腾讯云公网地址
+          REMOTE_USER: Administrator # 腾讯云登录后默认为 root 用户
           TARGET: /home/lighthouse/node-server # 打包后的 dist 文件夹将放在/home/lighthouse/node-server
 
