@@ -3,7 +3,7 @@ module.exports = {
     mode: "development",
     entry: path.join(__dirname, './src/main.ts'),
     output: {
-        path: path.join(__dirname, './dev_dist'),
+        path: path.join(__dirname, './dist'),
         filename: 'bundle.js',
 
     },
