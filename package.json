@@ -2,13 +2,23 @@
   "name": "tencentcloudapi_v3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "module": "dist/main.js",
+  "types": "dist/type.d.ts",
+  "main": "dist/main.js",
+  "author": "zrcode",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.config.js",
     "build": "webpack --config webpack.pro.config.js"
   },
   "keywords": [],
-  "author": "",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "type.d.ts"
+  ],
   "license": "ISC",
   "devDependencies": {
     "ts-loader": "^9.4.4",
